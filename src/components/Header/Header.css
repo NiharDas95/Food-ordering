@@ -3,3 +3,8 @@
     display: block;
     background: #333;
 }
+.logo-container {
+    width: 100px;
+    height: 50px;
+    background-image: url("../../foofoo.jpg");
+}

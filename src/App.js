@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import Navigation from './components/Navigation/index';
@@ -18,6 +17,9 @@ function App() {
       <Navigation />
       <Switch>
         <Route path="/" exact key="1">
+        <Catagories />
+        </Route>
+        <Route path="/catagories" exact key="1">
         <Catagories />
         </Route>
         <Route path="/item" key="2">
