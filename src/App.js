@@ -1,39 +1,40 @@
 import './App.css';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {Route,Switch} from 'react-router-dom';
 import Navigation from './components/Navigation/index';
 import Catagories from './pages/Catagories/index';
-import Listing from './pages/Listing-page/index';
 import Orders from './pages/Orders/index';
 import Address from './pages/Address/index';
-import Header from './components/Header/index';
+import Header from './components/Header/';
+import Listing from './pages/Listing-page/index';
 
 
 function App() {
   return (
       <div>
       
-      <Router>
       <Header />
       <Navigation />
       <Switch>
         <Route path="/" exact key="1">
         <Catagories />
         </Route>
-        <Route path="/catagories" exact key="1">
+        <Route path="/catagories" key="2">
         <Catagories />
         </Route>
-        <Route path="/item" key="2">
+        <Route path="/catagories/:catag" key="3">
         <Listing />
         </Route>
-        <Route  path='/orders' key="3">
+        <Route  path='/orders' key="4">
         <Orders />
         </Route>
-        <Route  path='/address' key="4">
+        <Route  path='/address' key="5">
         <Address />
+        </Route>
+        {/* <Route  path='/address123' key="5" render={()=> <h1>Herrrrrrrr</h1>}> */}
+        <Route  path='/address123' key="6" children={()=> <h1>Herrrrrrrr</h1>}>
         </Route>
         
       </Switch>
-      </Router>
      
       </div>
   );

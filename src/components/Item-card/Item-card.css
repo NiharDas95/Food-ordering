@@ -2,6 +2,7 @@
     width: 800px;
     height: 200px;
     background: #fff;
+    position: relative;
 }
 
 .desc {
@@ -14,4 +15,17 @@
     background: rgb(80, 181, 7);
     border: 1px solid black;
     border-radius: 35%;
+}
+.cart-field {
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+.cart-field input {
+    width: 50px;
+}
+.btn-wraper {
+    position: absolute;
+    right: 0;
+    top: 150px;
 }
