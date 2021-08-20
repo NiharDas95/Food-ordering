@@ -5,7 +5,7 @@ import Catagories from './pages/Catagories/index';
 import Orders from './pages/Orders/index';
 import Address from './pages/Address/index';
 import Header from './components/Header/';
-import Listing from './pages/Listing-page/index';
+import Listing from './pages/Listing-page';
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Route path="/catagories" key="2">
         <Catagories />
         </Route>
-        <Route path="/catagories/:catag" key="3">
+        <Route path="/catagory/:catag" key="3">
         <Listing />
         </Route>
         <Route  path='/orders' key="4">

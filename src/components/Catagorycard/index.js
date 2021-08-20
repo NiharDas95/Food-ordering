@@ -1,16 +1,17 @@
 import "./Catagorycard.css";
-import {Link, useHistory} from 'react-router-dom';
-function Catagorycard ({desc,key,imageUrl,catagory}) {
-   const history=useHistory();
+import { Link } from 'react-router-dom';
+function Catagorycard ({desc,imageUrl,catagory}) {
+  const routeName = `/catagory/${catagory}`
     return (
-        
-            <div onClick={()=>history.push(`/catagory?catag=${catagory}`)} className="catagory-container">
-         
-        <img src={imageUrl} alt={desc} width="450" height="333"></img>
-      <span className="desc">
-          {desc}
-      </span>
-    </div>
+      <Link to={routeName}>
+        <div className="catagory-container">
+          <img src={imageUrl} alt={desc} width="450" height="333"></img>
+            <span className="desc">
+              {desc}
+            </span>
+        </div> 
+      </Link>
+            
      
     )
 }

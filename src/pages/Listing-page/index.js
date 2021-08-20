@@ -5,8 +5,8 @@ import {useState} from 'react';
 import { useParams } from "react-router-dom";
 function Listing (props) {
     console.log(props);
-    const param = useParams();
-    console.log(param);
+    const { catag } = useParams();
+    console.log('listing catag', catag);
     const data = [
         {
             "desc": "Chicken Butter Masala",
@@ -95,6 +95,7 @@ function Listing (props) {
     }
     return (
         <div className="cardswraper">
+            <h1>components Working wiyh {catag}</h1>
           {  masterData.map((item, index) => {
          return (
             <Card>
