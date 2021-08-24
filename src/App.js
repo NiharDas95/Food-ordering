@@ -5,11 +5,13 @@ import Catagories from './pages/Catagories/index';
 import Orders from './pages/Orders/index';
 import Address from './pages/Address/index';
 import Header from './components/Header/';
-import Listing from './pages/Listing-page';
+import Listing from './pages/Listing-page/index';
+import MyProvider from './common/MyProvider';
 
 
 function App() {
   return (
+    <MyProvider>
       <div>
       
       <Header />
@@ -37,6 +39,8 @@ function App() {
       </Switch>
      
       </div>
+    </MyProvider>
+
   );
 }
 

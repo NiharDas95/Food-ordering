@@ -1,8 +1,8 @@
 import "./Item-card.css"
 function Itemcard (props) {
-   function  addToCartHandler () {
-      console.log("add to cart");
-    }
+  //  function  addToCartHandler () {
+  //     console.log("add to cart");
+  //   }
     return (
      <div className="container">
        <span className="desc">
@@ -11,15 +11,15 @@ function Itemcard (props) {
        <span className="price">₹{props.price}</span>
        <hr/>
        <div className="cart-field">
-         <button disabled={props.cartQty === 0 && true}  onClick={ (e) => props.decrementHandler(e, props.index)}>-</button>
+         <button disabled={props.cartQty === 0 && true}  onClick={ () => props.decrementHandler()}>-</button>
          <input readOnly value={props.cartQty} /> 
-         <button  onClick={ (e) => props.incrementHandler(e, props.index)}>+</button>
+         <button  onClick={ () => props.incrementHandler()}>+</button>
        </div>
-       <div className="btn-wraper">
+       {/* <div className="btn-wraper">
          <button disabled={props.cartQty === 0} onClick={addToCartHandler}>
            Add to Cart
          </button>
-       </div>
+       </div> */}
      </div>
     )
 }
